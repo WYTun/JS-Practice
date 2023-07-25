@@ -1,2 +1,7 @@
-# SecondRepo
-This is my 2nd repo
+# JS-Practice
+
+This repo is used to keep the HTML, CSS & JS files for the learning projects
+
+rock-paper-scissors
+DOM (text changing + shipping calculator)
+
