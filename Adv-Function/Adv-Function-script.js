@@ -26,3 +26,17 @@ buttonElement.removeEventListener('click',eventListener )
 buttonElement.addEventListener('click', () => {
     console.log('Clicked2');
 });
+
+const array1 = [1, 3, -5, 9];
+console.log(array1.filter((value,index) => {
+    if(value >= 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}));
+
+array1.map((value, index) =>{
+    return 10;
+})
