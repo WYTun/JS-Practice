@@ -1,10 +1,11 @@
-let score = JSON.parse(localStorage.getItem('score')) || {
-    wins: 0,
-    losses: 0,
-    ties: 0
-  };
+  let score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };
 
   let isAutoPlaying = false;
+
   let intervalID;
 
   updateScoreElement();
@@ -105,7 +106,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     if(!isAutoPlaying){
       document.querySelector('.auto-play-button').innerHTML = 'Stop Playing';
 
-      intervalID = setInterval(function(){
+      intervalID = setInterval(() => {
         const playerMove = pickComputerMove();
         playGame(playerMove);
       },1000);
@@ -116,6 +117,4 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       document.querySelector('.auto-play-button').innerHTML = 'Auto Play';
     }
   }
-
-
 
