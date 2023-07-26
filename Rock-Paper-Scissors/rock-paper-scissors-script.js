@@ -3,7 +3,10 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     losses: 0,
     ties: 0
   };
-  
+
+  let isAutoPlaying = false;
+  let intervalID;
+
   updateScoreElement();
   
   /*
@@ -97,4 +100,22 @@ let score = JSON.parse(localStorage.getItem('score')) || {
       localStorage.removeItem('score');
       updateScoreElement();
   }
+
+  function autoPlay(){
+    if(!isAutoPlaying){
+      document.querySelector('.auto-play-button').innerHTML = 'Stop Playing';
+
+      intervalID = setInterval(function(){
+        const playerMove = pickComputerMove();
+        playGame(playerMove);
+      },1000);
+      isAutoPlaying = true;
+    }else{
+      clearInterval(intervalID);
+      isAutoPlaying = false;
+      document.querySelector('.auto-play-button').innerHTML = 'Auto Play';
+    }
+  }
+
+
 
