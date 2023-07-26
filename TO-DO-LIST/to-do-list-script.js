@@ -9,8 +9,8 @@ function renderToDoList(){
         const {name, dueDate} = toDoObject;
 
         const html = `
-        <div>${name}</div> <div> ${dueDate} </div> 
-        <button onclick="
+        <div class="name">${name}</div> <div class="date"> ${dueDate} </div> 
+        <button class="delete" onclick="
             todoList.splice(${i}, 1);
             renderToDoList();">Delete</button> 
 
