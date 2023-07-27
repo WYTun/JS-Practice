@@ -4,7 +4,7 @@ body{
 
 .todo-grid, .inputGrid{
     display: grid;
-    grid-template-columns: 200px 150px 100px;
+    grid-template-columns: 200px 150px 100px 100px;
     gap: 20px;
 }
 
@@ -32,9 +32,14 @@ body{
     align-self: center;
 }
 
-/* .name, .date{
-    border: 2px dotted bisque;
-} */
+.done{
+    border-radius: 5px;
+    background-color: rgba(12, 238, 208, 0.795);
+    font-weight: bold;
+    height: 30px;
+    width: 60px;
+    align-self: center;
+}
 
 .date{
     align-self: center;
